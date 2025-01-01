@@ -93,8 +93,8 @@ if __name__ == "__main__":
         ]
 
     sudoku1 = Sudoku(valid_board)
-    print(np.matrix(valid_board))
-    print("This board is valid: ", sudoku1.is_valid(valid_board)) #True
+    # print(np.matrix(valid_board))
+    # print("This board is valid: ", sudoku1.is_valid(valid_board)) #True
 
     invalid_board = [
         [5, 3, 4, 6, 7, 8, 9, 1, 2],  
@@ -109,7 +109,7 @@ if __name__ == "__main__":
         ]
     sudoku2 = Sudoku(invalid_board)
 
-    print("This board is invalid: ", sudoku2.is_valid(invalid_board)) #False
+    # print("This board is invalid: ", sudoku2.is_valid(invalid_board)) #False
 
     valid_incomplete_sudoku_board = [
         [5, 3, 0, 0, 7, 0, 0, 0, 0],
@@ -123,11 +123,13 @@ if __name__ == "__main__":
         [0, 0, 0, 0, 8, 0, 0, 7, 9]
     ]
     sudoku3 = Sudoku(valid_incomplete_sudoku_board)
-    print("This board is valid: ", sudoku3.is_valid(valid_incomplete_sudoku_board))
-    print(sudoku3.possibleEntry(valid_incomplete_sudoku_board, 1, 1, 2))
+    # print("This board is valid: ", sudoku3.is_valid(valid_incomplete_sudoku_board))
+    # print(sudoku3.possibleEntry(valid_incomplete_sudoku_board, 1, 1, 2))
+    print(np.matrix(valid_incomplete_sudoku_board))
+    input()
     complete_board = sudoku3.solve(valid_incomplete_sudoku_board)
+    
     if complete_board:
-
         print(np.matrix(complete_board))
     else: 
         print(" a solution doesn't exist or was not found. ")
